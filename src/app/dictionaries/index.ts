@@ -9,5 +9,10 @@ export const dictionaries = {
 export type Locale = "fa" | "en";
 
 export function getDictionary(locale: Locale) {
-    return dictionaries[locale];
+    const dict = dictionaries[locale];
+    if (!dict) {
+        console.warn(`Dictionary for locale "${locale}" not found, defaulting to "en"`);
+        return dictionaries.en;
+    }
+    return dict;
 }

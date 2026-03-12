@@ -6,10 +6,11 @@ export default async function LocaleLayout({
     params,
 }: {
     children: React.ReactNode;
-    params: Promise<{ locale: Locale }>;
+    params: { locale: Locale } | Promise<{ locale: Locale }>;
 }) {
     const { locale } = await params;
-    const dict = await getDictionary(locale);
+
+    const dict = getDictionary(locale);
     const isRTL = locale === "fa";
 
     return (
@@ -17,7 +18,8 @@ export default async function LocaleLayout({
             dir={isRTL ? "rtl" : "ltr"}
             className={locale === "fa" ? "font-vazir" : "font-sans"}
         >
-            <Navbar locale={locale} dict={dict} />
+            {/* Pass locale as a prop */}
+            <Navbar dict={dict} />
             {children}
         </div>
     );
