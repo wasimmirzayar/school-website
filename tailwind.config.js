@@ -1,10 +1,15 @@
 export default {
     content: [
-        "./app/**/*.{js,ts,jsx,tsx}",        // همه layout و صفحات داخل app/
-        "./components/**/*.{js,ts,jsx,tsx}", // اگر کامپوننت دارید
+        "./app/**/*.{js,ts,jsx,tsx}",       // همه layout و صفحات
+        "./components/**/*.{js,ts,jsx,tsx}", // همه کامپوننت‌ها
     ],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                inter: ["Inter", "sans-serif"],
+                vazir: ["Vazirmatn", "sans-serif"],
+            },
+        },
     },
     plugins: [],
 };

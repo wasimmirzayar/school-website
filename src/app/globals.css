@@ -1,21 +1,24 @@
+/* Tailwind v4 */
 @import "tailwindcss";
 
+/* فونت Inter */
 @font-face {
   font-family: 'Inter';
-  src: url('.../fonts/Inter/Inter-Regular.woff2') format('woff2'),
-    url('.../fonts/Inter/Inter-Regular.woff') format('woff');
+  src: url('/fonts/Inter/Inter-Regular.woff2') format('woff2'),
+    url('/fonts/Inter/Inter-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Inter';
-  src: url('.../fonts/Inter/Inter-Bold.woff2') format('woff2'),
-    url('.../fonts/Inter/Inter-Bold.woff') format('woff');
+  src: url('/fonts/Inter/Inter-Bold.woff2') format('woff2'),
+    url('/fonts/Inter/Inter-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
 
+/* فونت فارسی */
 .font-vazir {
   font-family: "Vazirmatn", sans-serif;
 }
